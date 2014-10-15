@@ -1,9 +1,9 @@
 /**
  * Created by Javier on 04/10/2014.
  */
-/*
+
 angular
-    .module('guide', ['ui.router'])
+    .module('guide', ['ui.bootstrap', 'ui.router', 'ui.validate'])
 
 // Configuración de las rutas
     .config(['$urlRouterProvider', '$stateProvider', function ($urlRouterProvider, $stateProvider){
@@ -12,40 +12,27 @@ angular
             .state('home', {
                 url: '/',
                 templateUrl: 'views/mainPage.html',
-                controller: 'mainCtrl'
+                controller: 'CarouselDemoCtrl'
             })
             .state('about', {
                 url:'/about',
                 templateUrl: 'views/about.html',
-                controller: 'aboutCtrl'
+                controller: 'ExampleController'
             })
     }]);
-    */
 
-angular.module('ui.bootstrap.demo', ['ui.bootstrap']);
-angular.module('ui.bootstrap.demo').controller('AccordionDemoCtrl', function ($scope) {
-    $scope.oneAtATime = true;
+angular
+    .module('guide')
+        .controller('ExampleController', ['$scope', function($scope) {
+    $scope.master = {};
 
-    $scope.groups = [
-        {
-            title: 'Dynamic Group Header - 1',
-            content: 'Dynamic Group Body - 1'
-        },
-        {
-            title: 'Dynamic Group Header - 2',
-            content: 'Dynamic Group Body - 2'
-        }
-    ];
-
-    $scope.items = ['Item 1', 'Item 2', 'Item 3'];
-
-    $scope.addItem = function() {
-        var newItemNo = $scope.items.length + 1;
-        $scope.items.push('Item ' + newItemNo);
+    $scope.update = function(user) {
+        $scope.master = angular.copy(user);
     };
 
-    $scope.status = {
-        isFirstOpen: true,
-        isFirstDisabled: false
+    $scope.reset = function() {
+        $scope.user = angular.copy($scope.master);
     };
-});
+
+    $scope.reset();
+}]);

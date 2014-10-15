@@ -1,51 +1,65 @@
 <!DOCTYPE html>
-<html lang="es" ng-app="ui.bootstrap.demo">
+<html lang="es" ng-app="guide">
 <head>
     <meta charset="utf-8">
 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
     <script src="bower_components/angular/angular.min.js"></script>
-    <script src="bower_components/angular-ui-utils/ui-utils.min.js"></script>
+    <script src="bower_components/angular-ui-utils/ui-utils.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
-    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
 
+    <!-- Bootstrap core CSS -->
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-
+    <!-- Custom styles for this template -->
+    <link href="css/jumbotron-fixed.css" rel="stylesheet">
+    <link href="css/dropdown-fixed.css" rel="stylesheet">
 
     <script src="app.js"></script>
 
-    <title>Bootstrap 101 Template</title>
+    <title>AngularJS-ui Bootstrap</title>
+
+    <nav>
+        <!-- Fixed navbar -->
+        <div class="navbar navbar-default navbar-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">eCommerce</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#/">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#/units" class="dropdown-toggle" data-toggle="dropdown">Temas <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Tema 1 | Introducción al eCommerce</a></li>
+                                <li><a href="#">Tema 2 | Infraestructuras para el eCommerce</a></li>
+                                <li><a href="#">Tema 3 | ...</a></li>
+                                <li><a href="#">Tema 4 | ...</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#/about">Contacto</a></li>
+                        </li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+        </div>
+    </nav>
 
 </head>
 <body>
-    <div class="container" ng-controller="AccordionDemoCtrl">
-        <p>
-            <button class="btn btn-default btn-sm" ng-click="status.open = !status.open">Toggle last panel</button>
-            <button class="btn btn-default btn-sm" ng-click="status.isFirstDisabled = ! status.isFirstDisabled">Enable / Disable first panel</button>
-        </p>
-
-        <label class="checkbox">
-            <input type="checkbox" ng-model="oneAtATime">
-            Open only one at a time
-        </label>
-        <accordion close-others="oneAtATime">
-            <accordion-group heading="Static Header, initially expanded" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
-                This content is straight in the template.
-            </accordion-group>
-            <accordion-group heading="{{group.title}}" ng-repeat="group in groups">
-                {{group.content}}
-            </accordion-group>
-            <accordion-group heading="Dynamic Body Content">
-                <p>The body of the accordion group grows to fit the contents</p>
-                <button class="btn btn-default btn-sm" ng-click="addItem()">Add Item</button>
-                <div ng-repeat="item in items">{{item}}</div>
-            </accordion-group>
-            <accordion-group is-open="status.open">
-                <accordion-heading>
-                    I can have markup, too! <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
-                </accordion-heading>
-                This is just some content to illustrate fancy headings.
-            </accordion-group>
-        </accordion>
-    </div>
+    <!-- AngularUI View -->
+    <ui-view></ui-view>
 </body>
 </html>
