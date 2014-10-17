@@ -12,7 +12,7 @@ angular
             .state('home', {
                 url: '/',
                 templateUrl: 'views/mainPage.html',
-                controller: 'CarouselDemoCtrl'
+                controller: 'mainPageCtrl'
             })
             .state('about', {
                 url:'/about',
