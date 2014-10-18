@@ -19,6 +19,14 @@ angular
                 templateUrl: 'views/about.html',
                 controller: 'ExampleController'
             })
+            .state('units', {
+                url:'/units',
+                templateUrl: 'views/units.html'
+            })
+            .state('unit1', {
+                url:'/units/unit1',
+                templateUrl: 'views/units/unit1.html'
+            })
     }]);
 
 angular
