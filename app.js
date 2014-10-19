@@ -27,6 +27,10 @@ angular
                 url:'/units/unit1',
                 templateUrl: 'views/units/unit1.html'
             })
+            .state('unit2', {
+                url:'/units/unit2',
+                templateUrl: 'views/units/unit2.html'
+            })
     }]);
 
 angular
