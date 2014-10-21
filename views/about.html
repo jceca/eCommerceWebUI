@@ -1,20 +1,35 @@
-<div ng-controller="ExampleController">
-    <form>
-        Name:
-        <input type="text" ng-model="user.name" ng-model-options="{ updateOn: 'blur' }" /><br />
-        Other data:
-        <input type="text" ng-model="user.data" /><br />
-    </form>
-    <pre>username = "{{user.name}}"</pre>
-    <pre>userdata = "{{user.data}}"</pre>
+<div class="container">
+    <div class="page-header">
+        <h1>Javier Garcia Ceca <small>Autor</small></h1>
+    </div>
+    Estudiante de Grado en Ingeniería Informática en la Escuela Superior de Informática de la Universidad de Castilla - La Mancha.
+    <br>
+    Especilidad en Tecnologías y Sistemas de la Información.
+    <br>
+    <br>
+    <div class="page-header">
+        <h1>Sobre la página <small>Tecnologías</small></h1>
+    </div>
+    <p class="text-justify">
+        La tecnología que se ha escogido para la realización de la página es la de un framework desarrollado por Google, AngularJS.
+        <br>
+        <br>
+        <div align="center">
+            <img src="assets/images/AngularJS-large.png" class="img-responsive" alt="Twitter">
+            <br>
+            Fig. 1 - AngularJS (www.angularjs.org).
+        </div>
+        <br>
+        AngularJS es un framework de JavaScript de código abierto, mantenido por Google, que ayuda con la gestión de lo que se conoce
+        como aplicaciones de una sola página. Está basado en el MVC, Modelo Vista-Controlador en un intento de hacer el desarrollo y testing
+        más fáciles.
+
+        Todos los frameworks tienen una serie de características que los diferencian de otros. Sabiendo como explotar correctamente
+        estas características para crear potentes aplicaciones, AngularJS se caracteriza por:
+        <ul>
+            <li>Comprensión del funcionamiento interno de los <strong>templates</strong></li>
+            <li>Data-binding bidireccional para fortalecer la relacion entre las vistas y los datos que controlan.</li>
+            <li>Dependency Injection, AngularJS inyecta las dependencias sin necesidad de perder el tiempo referenciandolas.</li>
+        </ul>
+    </p>
 </div>
-
-<style type="text/css">
-    .css-form input.ng-invalid.ng-dirty {
-        background-color: #FA787E;
-    }
-
-    .css-form input.ng-valid.ng-dirty {
-        background-color: #78FA89;
-    }
-</style>
