@@ -31,12 +31,22 @@
             </ul>
             </p>
 
-            <h2>2. Origen y evolución</h2>
-            <h3>Primera Etapa: Electronic Data Interchange - EDI</h3>
+            <h2>2. Origen y evolución - EDI (Electronic Data Interchange)</h2>
+            <h3>2.1 Definición EDI</h3>
             <p class="text-justify">
                 EDI se refiere a la transmisión de datos entre organizaciones vía electrónica. Aunque esto incluye el email,
-                EDI también aplica mucho más que eso. EDI define un conjunto de estándares que permite a los negocios comunicar
-                información de forma rápida y fácil para beneficio mutuo.
+                EDI también aplica mucho más que eso. EDI es el sistema electrónico que permite a las empresas enviar y recibir documentos estándares
+                (pedidos, albaranes, facturas, relaciones de facturas, avisos de expedición, inventarios, etc.) de forma instantánea y con la mínima
+                intervención manual.
+            <p align="center">
+                <img src="assets/images/edi.png" class="img-responsive" alt="EDI">
+            <p align="center">Fig.1 - Fundamentos EDI (Fuente: www.ediacademy.com).</p>
+
+            <br>
+            <br>
+
+                En la actualidad, EDI sigue siendo más usado que las soluciones basadas en XML, ya que este aun siendo mejor
+                “tecnológicamente” no aporta ninguna ventaja, además EDI es mas ampliamente usado por las empresas.
                 <br>
                 <br>
                 Podemos definir EDI como un procesador de lenguajes montado sobre un sistema de comunicación. Tiene un lenguaje
@@ -45,18 +55,106 @@
 
                 El uso de EDI implica:
 
+            <br>
             <ol>
                 <li>Estándares de comunicación que normalizan los documentos.</li>
                 <li>Existencia de sistemas y protocolos de intercambio de datos.</li>
                 <li>Redes que los soporten y aseguren privacidad en las transacciones de datos.</li>
             </ol>
+            <p class="text-justify">
+                EDI es un tipo de integración B2B mediante el cual empresas-colaboradoras transmiten datos entre si usando formatos de documentos y
+                protocolos de comunicación comunes. Una solución de este tipo debe automatizar los procesos de importación y exportación de información a/de
+                su sistema interno de gestión (ERP) a partir de sofisticados sistemas de mapping y transformación a/de formatos estándar, y permitir el
+                envío y recepción.
 
-            En la actualidad, EDI sigue siendo más usado que las soluciones basadas en XML, ya que este aun siendo mejor
-            “tecnológicamente” no aporta ninguna ventaja, además EDI es mas ampliamente usado por las empresas.
-
+                Esta capacidad de integración convierte a los mensajes EDI en la mejor opcioón para optimizar la mayor parte de los procesos
+                administrativos y de gestión, gracias, entre otras, a las mejoras obtenidas por reducción de tiempos de procesamiento, incremento
+                de la seguridad y confidencialidad, o reducción de costes.
             </p>
 
-            <h3>Segunda Etapa: Presencia en la web</h3>
+            <br>
+
+            <p align="center">
+                <img src="assets/images/funEDI.jpg" class="img-responsive" alt="EDI">
+            <p align="center">Fig.1 - Fundamentos EDI (Fuente: www.ediacademy.com).</p>
+
+            <h3>2.2 Implementación de EDI</h3>
+            <p class="text-justify">
+                Antes de implementar una solución EDI, hay que tener claro cuales son los pilares y que pasos hay que seguir para que la implementación
+                del sistema EDI sea un completo éxito.
+            </p>
+            <h4>2.2.1 Requisitos EDI</h4>
+            <p class="text-justify">
+                Para hacer EDI se necesitan cumplir los siguientes puntos:
+                <ul class="text-justify">
+                    <li><strong>Tener un lenguaje estándar: </strong>El intercambio de información electrónica requere de un lenguaje estandarizado, compartido por
+                    emisor y receptor. Existen distintos estándares para la construcción de documentos EDI como EDIFACT, X12, XML...</li>
+                    <li><strong>Software EDI: </strong>Emisor y receptor deberán disponer de una solución EDI con la que construir y gestionar los mensajes, conforme
+                    al estándar pactado.</li>
+                    <li><strong>Red de comunicaciones: </strong> Los intercambio EDI requeren de sistemas de comunicaciones seguros y adaptados a las peculiaridades de este tipo
+                    de transacciones. Existen diversas opciones, si bien las mñas extendidas son las VAN o Redes de Valor Añadido.</li>
+                </ul>
+            </p>
+            <h4>2.2.2 Fases de EDI </h4>
+            <p class="text-justify">
+                <ol class="text-justify">
+                    <li><strong>Analisis de la factibilidad.</strong> Para determinar si este sistema de comunicación es viable en la empresa.</li>
+                    <li><strong>Planificación preliminar.</strong> Para establecer la viabilidad de traducir y transmitir los documentos afectados, conocer
+                    los interlocutores afectados y sus sistemas, y saber qué aplicaciones afectadas para establecer la integración. Por ejemplo, si es necesario
+                    invertir en nuevos servidores y bases de datos para alojar el sistema EDI o si se requiere de una asignación mayor de recursos de la empresa
+                    a gestionar y mantener el EDI.</li>
+                    <li><strong>Desarrollo.</strong>
+                    <ul class="text-justify">
+                        <li>Establecer con qué socios se va a utilizar EDI.</li>
+                        <li>Determinar los acuerdos de itnercambio necesarios con estos (como documentos a intercambiar, protocolos, acuerdos legales, etc.)</li>
+                        <li>Cubrir las necesidades técnicas (hardware, software y redes) que el sistema supone.</li>
+                        <li>Establecer y cubrir las necesidades de formación y documentación del sistema.</li>
+                        <li>Establecer funciones de control que permitan garantizar que el sistema cumple con sus objetivos.</li>
+                    </ul></li>
+                    <li><strong>Puesta en marcha y seguimiento.</strong> El entorno EDI está en continua evolución, lo cual añade complejidad al mantenimiento necesario.</li>
+                    <li><strong>El costo</strong> en desarrollos propios suele ser elevado, en aplicaciones subcontratadas el servicio de mantenimiento va incluido.</li>
+                </ol>
+            </p>
+            <h4>2.2.3 Componentes EDI </h4>
+            <p class="text-justify">
+                <ol class="text-justify">
+                    <li><strong>Fisicos o de hardware: </strong> un ordenador; un módem o placa de comunicaciones, que conecte el ordenador a las líneas de
+                    comunicaciones; una línea de transmisión de información.</li>
+                    <li><strong>Software: </strong>Software de integración o de enlace entre las app de la empresa, cuyos documentos se enviarán vía EDI;
+                    software de traducción que reformatea los datos de los documentos; software de comunicación, que envía los datos a través de las
+                    redes de telecomunicación y software de gestión de las actividades llevadas a cabo bajo EDI.</li>
+                </ol>
+            </p>
+            <h3>2.3 Caso de Uso de EDI - Tienda de ropa</h3>
+            <h4>2.3.1 Objetivo</h4>
+                <p class="text-justify">
+                    Eliminar el papel del proceso de facturación y envío con sus clientes de pequeñas y medianas empresas mediante el aprovechamiento de la
+                    tecnología EDI utilizada con sus cuentas más grandes al tiempo que garantiza la satisfacción del cliente.
+                </p>
+            <h4>2.3.2 Pasos a seguir</h4>
+            <p class="text-justify">
+                <ul>
+                    <li>Implementar un sistema de notificación de facturación y envío usando un formulario web.</li>
+                    <li>Usa un solo processo EDI para todos los clientes, grandes y pequeños con total visibilidad del proceso de facturación y envío.</li>
+                </ul>
+            </p>
+            <h4>2.3.3 Resultados</h4>
+            <p class="text-justify">
+                <strong>Importante ahorro de costes y mejora de la velocidad de envío</strong>
+                <br>
+                <br>
+                <ul>
+                    <li>La evolución hacia el intercambio electronico de documentos ha reducido drásticamente los costes de envíos. Los envíos no
+                    son retrasados por falta de documentación.</li>
+                    <li>Días de ventas menores pendientes (DSO) debido a la facilidad y la más rápida facturación y pago.</li>
+                    <li>Un modelo de precios flexible permitió al fabricante de ropa que pagar todos los costos del programa , eliminando cualquier
+                        obstáculo a la participación de sus cliente</li>
+                </ul>
+            </p>
+
+            <!--AQUI VAMOS A AÑADIR TODO LO DEL EDI PARA SEPARAR EL TEMA 1 DEL TEMA 2, EN EL CUAL SOLO VEREMOS LOS TIPOS DE TIENDAS-->
+
+            <!--<h3>Segunda Etapa: Presencia en la web</h3>
             <p class="text-justify">
                 Surge en 1993 con la aparición del primer navegador, NCSA Mosaic. El objetivo fundamental de esta fase es la de
                 parecer en la web, tener la imagen de una empresa allí. No había BBDD ni nada parecido, únicamente el folleto
@@ -140,7 +238,7 @@
 
                 Ejemplo: Todocolección
 
-            </p>
+            </p>-->
 
             <h2>3. Definición de Comercio y Negocio Electrónico.</h2>
             <p class="text-justify">
@@ -370,123 +468,7 @@
                 </div>
             </div>
 
-            <h2>5. Maneras de vender</h2>
-            <p class="text-justify">
-                    Las formas más populares de vender en internet son los <strong>Portales gestionados por terceros
-                </strong>o marketplaces,<strong> tiendas on-line o virtuales</strong> y <strong>blogs y redes sociales.</strong>
-                <ul>
-                    <li><strong>Portales gestionados por terceros o e-marketplaces: </strong> Sitios como Amazon, eBay, Todocolección, etc.
-                        Sitios con capacidad de EC con los que existan acuerdos.</li>
-                    <li><strong>Tiendas virtuales: </strong>Creación propia o por empresa externa: desde cero o empleando plantillas
-                        comerciales, producto de negocio de empresas o soluciones opensource (p.e. Magento, PrestaShop,...).</li>
-                    <ul>
-                        <li><strong>Arrendamiento de servicios de EC.</strong></li>
-                    </ul>
-                    <li><strong>f-Commerce.</strong></li>
-                </ul>
-            </p>
-            <h3>Social Commerce</h3>
-            <p class="text-justify">
-                El social commerce es la fórmula que se ofrece para atender a un público que demanda cada vez mas información y
-                busca ofertas personalizadas: facilitando las herramientas necesarias para la interacción marca-usuario y usuario-usuario.
-                <br>
-                Introduce las redes sociales en la compra y venta online de productos y servicios. Las plataformas que mejor
-                permiten desarrollar social commerce son: Facebook, Pinterest, Twitter.
-                <br>
-                <br>
-                Ventajas del <strong>Social Commerce:</strong>
-                <ul class="text-justify">
-                    <li><strong>Visibilidad: </strong>gran número de usuarios, con una capacidad de difusión ilimitada. Si un
-                        producto gusta será compartido, generando contenido.</li>
-                    <li><strong>Compromiso: </strong>fomenta la relación comprador-marca/empresa, aumentando el compromiso en ambas  direcciones.</li>
-                    <li><strong>Personalización: </strong>la segmentación nos permite llevar productos personalizados, qué ofrecer a quién.</li>
-                    <li><strong>Confianza: </strong>una recomendación recibida del entorno aumenta la confianza.</li>
-                    <li><strong>Fidelización: </strong>se premia a los seguidores con descuentos o con promociones que solo están disponibles a través de enlaces
-                    colocados en las redes sociales que llevan a la página de la tienda.</li>
-                    <li><strong>Facebook: </strong>Cuenta con la información y tecnologías para personalizar al máximo la
-                        experiencia de compra en todas sus fases; desde la presentación de productos, hasta el pago.
-                        Su interés e inversión sigue creciendo en esta dirección pensando en que en un futuro gran parte
-                        de las compras online se harán por este canal.</li>
-                    <li><strong>Pinterest: </strong>Permite una magnífica visualización del producto y organización según categorías,
-                        además de introducir etiquetas de precio. Sirven para “vender” el producto sobre todo visualmente y enlazar
-                        con la tienda online para realizar la transacción.</li>
-                    <li><strong>Twitter: </strong>Permitir a los comercios ofrecer sus productos y servicios directamente desde un tuit.</li>
-                </ul>
-            </p>
-            <h4>f-Commerce</h4>
-            <p class="text-justify">
-                <ul>
-                    <li>Aplicaciones que te permiten crear una vidriera (tipo catálogo) en Facebook pero la operación de venta se hace fuera.</li>
-                    <li>Aplicaciones que permiten crear una tienda completa en Facebook.</li>
-                    <li>Aplicaciones que integran e-commerce con Facebook.</li>
-                </ul>
-                <div align="center">
-                    <img src="assets/images/Facebook512.png" class="img-responsive" alt="Facebook">
-                    <br>
-                    Fig. 5 - Facebook (Fuente: https://developers.facebook.com/).
-                </div>
-
-            </p>
-
-            <h4>Pinterest</h4>
-            <p class="text-justify">
-                Pinterest se está convirtiendo en la fuente más influyente de tráfico de referencia del comercio electrónico social.
-                Es un gran tablón donde colgar imágenes y vídeos que compartir con todo el mundo (cuenta con los Rich Pins). Existe un botón llamado
-                “Pin It” con el que se motiva a las personas a pinear lo que les ha gustado, guardándolo en sus respectivos tablones ya sea para
-                compartirlo o para adquirirlo posteriormente. Se puede subir imágenes de las webs, cada imagen tiene asociada su url por lo que
-                pueden enlazar a la web de la tienda, sirve para enlazar imágenes de productos con tienda online.
-
-                <div align="center">
-                    <img src="assets/images/Pinterest_Logo_Red.png" class="img-responsive" alt="Pinterest">
-                    <br>
-                    Fig. 6 - Pinterest (Fuente: https://business.pinterest.com/es/brand-guidelines).
-                </div>
-
-            </p>
-
-            <h4>Twitter</h4>
-            <p class="text-justify">
-                Twitter quiere convertirse en una plataforma para EC, tiene muchas características que lo hacen especialmente interesante:
-                movilidad, la personalización y la geolocalización.
-                <br>
-                Actualmente se emplea en marketing, para comunicar información de la empresa (de manera divertida).
-
-                <div align="center">
-                    <img src="assets/images/twitter.png" height="190" alt="Twitter">
-                    <br>
-                    <br>
-                    Fig. 7 - Twitter (Fuente: https://about.twitter.com/es/press/brand-assets).
-                </div>
-            </p>
-
-            <h4>Blogs</h4>
-            <p class="text-justify">
-                Blogs nacen como mecanismo para expresar una afición personal (sonido válvulero de Whiteboxer Audio).
-                <br>
-                Muchos blogs comienzan a despertar el interés de la gente y surge la idea de convertir en negocio el objeto del blog
-                (desarrollar equipos de válvulas): Blog-Commerce; o acompañar la tienda con un blog donde se proporciona información útil.
-                <br>
-                Blogger, WordPress permiten la venta a través de sus blogs, para ello lo más sencillo y rápido es emplear widgets de
-                terceros que nos permitan construirnos nuestro formulario de venta, reserva, promoción o minitienda.
-                <br>
-                <br>
-                <div align="center">
-                    <img src="assets/images/blogs.jpg" class="img-responsive" alt="Twitter">
-                    <br>
-                    Fig. 8 - Blogs (Fuente: documania20.wordpress.com).
-                </div>
-            </p>
-
-            <p class="text-justify">
-                <strong>Desventajas </strong>del Social Commerce:
-                <ul>
-                    <li>Uso en un propósito distinto al que originalmente han tenido esas plataformas, con dos consecuencias: no están preparadas
-                        y rechazo por parte de los usuarios.</li>
-                    <li>No existe la mejor forma, todo depende de lo que se necesite, del tipo de negocio, del punto de partida y los objetivos que se pretenden alcanzar.</li>
-                </ul>
-            </p>
-
-        <h3>Clasificación</h3>
+        <h2>5. Clasificación de los negocios</h2>
         <p class="text-justify">
             Existen muchas formas de clasificar (etiquetar) un modelo de negocio on line, atendiendo a:
             <ul>
