@@ -11,7 +11,7 @@
  }
  .jumbotron:after {
      content:"";
-     background: url("../assets/images/j12.png");
+     background: url("../assets/images/ecommerce.png");
      opacity: 0.2;
      top: 0;
      left: 0;
