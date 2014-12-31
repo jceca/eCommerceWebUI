@@ -46,6 +46,11 @@
                     número de móvil, y tienes que introducir tus datos para confirmar la compra a través del teléfono.</li>
             </ol>
             <p class="text-justify">
+                A pesar de existir numerosos métodos de pago, sin duda el pago con tarjeta de crédito o débito es la ganadora seguida
+                muy de cerca del del e-Payment a través de pasarelas de pago. Más concretamente son las tarjetas de crédito Visa y Mastercard
+                las que predominan en Europa para el pago acaparando el 72% de las operaciones de compra en Internet.
+            </p>
+            <p class="text-justify">
                 Algunos de estos métodos necesitan de software adicional para poder establecer las comunicaciones con las entidades bancarias, como
                 las <b>pasarelas de pago</b> o el <b>pago con tarjeta</b> ya que estás operaciones deben realizarse por canales de confianza. A continuación
                 explicaremos cuales son los medios que comúnmente se instalan en las tiendas virtuales y de que forma hacer que los usuarios
@@ -65,10 +70,60 @@
                 de las entidades emisoras de tarjetas a través de la Red.
             </p>
             <p class="text-justify">
-                Para garantizar la seghuridad de dichas transacciones estas pasarelas emplean sistemas y protocolos de seguridad.
+                Para garantizar la seguridad de dichas transacciones estas pasarelas emplean sistemas y protocolos de seguridad.
             </p>
-
-
+            <h3>Funcionamiento de las pasarelas de pago</h3>
+            <ol class="text-justify">
+                <li>El comercio virtual muestra la información del pedido (por ejemplo a través de un carrito de la compra) realizado
+                por su cliente con la información básica: artículo, unidades, referencia, precio unitario, precio total, impuestos
+                (IVA) y costes envío, etc.</li>
+                <br>
+                <li>Cuando el cliente procede a realizar el pago , el comercio virtual se conecta a una página segura (servidor seguro)
+                    perteneciente a la entidad bancaria desde donde se le solicita el número de tarjeta de crédito/débito, nombre titular,
+                    fecha de caducidad y, en algunos casos, el código de seguridad CVV. </li>
+                <br>
+                <li> El banco comprueba la validez de la operación, por lo que los datos de la tarjeta viajan cifrados al sistema del
+                    banco para que tramite su autorización con la Entidad emisora de la tarjeta (VISA, MasterCard, 4B, Red6000,...)
+                    donde se comprueba la validez de la tarjeta y la disponibilidad de fondos para el pago. De esta forma el comercio
+                    no tendrá acceso a los datos de la tarjeta, solamente del pedido y su importe, y el banco exclusivamente a la información
+                    de la tarjeta y no del pedido.</li>
+                <br>
+                <li>Una vez autorizada la transacción, el TPV Virtual informa tanto al comprador como a su comercio del resultado de la
+                    operación y devuelve el control a la web de la tienda virtual.</li>
+                <br>
+                <li>En el momento en que se recibe la confirmación bancaria, la tienda virtual confirma el pedido y se procede al
+                    abono del importe en la cuenta del vendedor. En este paso es habitual que el cliente reciba un correo electrónico
+                    de la tienda confirmando la compra e incluyendo información detallada del pedido realizado.</li>
+            </ol>
+            <h3>Claves para elegir una pasarela de pago</h3>
+            <p class="text-justify">
+                A la hora de montar nuestro comercio electrónico tenemos que decidir qué modalidades de pago vamos a ofrecer,
+                y en las modalidades online decidir qué pasarelas de pago vamos a integrar.
+            </p>
+            <ul class="text-justify">
+                <li><b>Costes: </b>3 precios clave, coste por <b>instalación</b> (lo que nos cuesta integrarla), <b>transaccion</b> (la tasa
+                    que se va a cobrar por cada transacción) y <b>mantenimiento</b> (lo que nos cobran al mes por mantenimiento).</li>
+                <br>
+                <li><b>Tiempo de integración: </b>Cuando decidimos montar una pasarela de pago la queremos en el momento. Actualmente
+                    este aspecto está muy bien cuidado por parte de las entidades bancarias y se puede hacer funcionar en menos de 24h.</li>
+                <br>
+                <li><b>API: </b>Cuando requerimos de un control avanzado de los pagos y suscripciones(sobre todo para esto último),
+                    necesitaremos de una pasarela de pago que nos proporcione una API para que nuestros desarrolladores tengan acceso
+                    a la información de la cuenta de la tienda y puedan sacarle el máximo provecho a las funcionalidades sobre nuestra cuenta.</li>
+                <br>
+                <li><b>SSL: </b>Muchas pasarelas ofrecen de por si, y sin pago extra, un certificado de <a href="https://www.verisign.es/" target="_blank">Verisign</a>, que es de los más fiables. Otras
+                    te ofrecen instalar el que vosotros tengáis contratado.</li>
+                <br>
+                <li><b>Tarjetas de crédito disponibles: </b>En Europa, VISA y Mastercard debe ser obligatorio, permitiendo además
+                    tarjetas de débito. Y un punto que hay que mirar es que obliguen a la comprobación del código de verificación
+                    <a href="https://www.payintegral.com/whatiscvv2_spanish.html" target="_blank"> CVV2</a>.</li>
+                <br>
+                <li><b>Sistema antifraude: </b>Si queréis llegar al máximo en cuanto a la seguridad de la transación se refiere,
+                    sería necesario mirar si la pasarela posee un sistema antifraude, como el <a href="http://en.wikipedia.org/wiki/Address_Verification_System" target="_blank">AVS</a> (Address Verification Service).
+                    Estos servicios solicitan al comprador que introduzca la dirección fiscal de su tarjeta de crédito, y la
+                    pasarela lo comprueba con los datos del banco a la que pertenece, la cual supuestamente sólo sabe el propietario de la tarjeta.</li>
+            </ul>
+            <h3>PayPal</h3>
 
         </div>
     </div>
